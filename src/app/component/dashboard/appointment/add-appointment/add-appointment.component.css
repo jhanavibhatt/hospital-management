@@ -1,0 +1,7 @@
+.mat-dialog-content {
+    width: 900px;
+  }
+  .custom-dialog-content {
+    width: 650px;
+    align-content: center; /* Adjust the width according to your preference */
+  }

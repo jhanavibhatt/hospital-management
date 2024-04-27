@@ -1,0 +1,35 @@
+<!-- export-report.component.html -->
+<!-- <button (click)="downloadPDF()">Download PDF</button> -->
+<mat-card class="card-margin">
+    
+<mat-card-content class="card-content-padding">
+    <button  mat-raised-button color="primary" (click)="downloadPDF()" class="float-right padding">
+        <mat-icon>download</mat-icon>
+        Download
+      </button>
+  <mat-form-field class="float-right card-content-padding">
+    <mat-label>Year</mat-label>
+    <mat-select>
+      <mat-option value="2020">2020</mat-option>
+      <mat-option value="2021">2021</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="float-right card-content-padding">
+    <mat-label>Select Month</mat-label>
+    <mat-select [(value)]="selectedMonth">
+      <mat-option *ngFor="let month of months" [value]="month">{{ month }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="float-right card-content-padding">
+    <mat-label>facility</mat-label>
+    <mat-select>
+      <mat-option value="one">all</mat-option>  
+    </mat-select>
+</mat-form-field>
+
+</mat-card-content>
+</mat-card>
+<!-- <mat-card>
+    <mat-card-content>Simple card</mat-card-content>
+  </mat-card> -->

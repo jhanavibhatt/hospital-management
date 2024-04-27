@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><mat-icon>home</mat-icon>
+      Home
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" routerLink="dashboard/appointment"><mat-icon>calendar_today</mat-icon>Dashboard</a> 
+      <a mat-list-item routerLinkActive="active" routerLink="dashboard/patient"> <mat-icon>personal_injury</mat-icon> Patient</a>
+      <a mat-list-item routerLinkActive="active" routerLink="dashboard/doctor"> <mat-icon>diversity_1</mat-icon> Doctor</a>
+      <a mat-list-item routerLinkActive="active" routerLink="dashboard/export"><mat-icon>cloud_download</mat-icon>ExportReport</a>
+      <a mat-list-item routerLinkActive="active" (click)="logout()"> <mat-icon>logout</mat-icon> Sign out</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      }
+      <span>emergency-room</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

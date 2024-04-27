@@ -1,0 +1,14 @@
+.mat-dialog-content {
+    width: 600px;
+  }
+  .custom-dialog-content {
+    width: 650px;
+    align-content: center; /* Adjust the width according to your preference */
+  }
+  .mat-grid-list {
+    overflow: hidden;
+  }
+  
+  .mat-radio-button {
+    margin-right: 15px;
+  }

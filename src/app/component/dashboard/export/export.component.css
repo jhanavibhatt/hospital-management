@@ -1,0 +1,15 @@
+.float-right{
+    float: right;
+}
+/* export-report.component.css */
+.card-margin {
+    margin: 20px; /* Adjust the margin as needed */
+  }
+/* export-report.component.css */
+.card-content-padding {
+    padding: 20px; /* Adjust the padding as needed */
+  }
+  
+  .padding{
+    margin: 25px;
+  }
